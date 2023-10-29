@@ -1,0 +1,78 @@
+ 
+<html>
+    <head>
+      <title>Gestures To Emoji</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+  
+    <body>
+    <div class="container">
+    
+      <center>
+        <h3 class="btn btn-info heading">Gesture To Emoji App
+          <br>
+          <span>&#x1f44d;</span>
+          <span>&#x270C;</span>
+          <span>&#x1F91E;</span>
+          <span>&#x1F44C;</span>
+          <span>&#x1F44E;</span>
+          <span>&#x270A;</span>
+          <span>&#x1F44B;</span>
+          <span>&#x1F64F;</span>
+        </h3>
+  
+        <br><br>
+        <p style="font-size: 30px; color: rgb(235, 176, 39); font-weight: bold; font-style: italic;" >Take a selfie of a gesture to know about its meaning
+            <br>
+          <b style="color: rgb(235, 219, 39); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">On the following gestures the model is trained </b>
+          <br>
+          <span>&#x1f44d;</span>
+          <span>&#x270C;</span>
+          <span>&#x1F91E;</span>
+          <span>&#x1F44C;</span>
+          <span>&#x1F64F;</span>
+          <br>
+        </p>
+        <br>
+        <br>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12" style="color: rgb(0, 8, 255);">
+            <label>Webcam View- </label>
+            <div id="camera"></div>
+            <br>
+          <br>
+          <button onclick="take_snapshot()" class="btn btn-primary">Capture Image</button>
+          </div>
+
+
+          <div class="col-md-4 col-sm-12 col-xs-12" style="color: rgb(54, 142, 21);">
+            <label>Prediction </label>
+            <br>
+            <br>
+            <p class="gesture_name" id="result_gesture_name"></p>
+            <p class="emoji" id="update_emoji"></p>
+          </div>
+
+
+      <div class="col-md-4 col-sm-12 col-xs-12" style="color: rgb(0, 8, 255);">
+        <label>Snapshot - </label>
+      <div id="result"></div>
+       <br><br>
+      <button class="btn btn-success" onclick="check()">Predict Gesture- </button>
+    </div>
+
+  </center>
+</div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
